@@ -3,7 +3,7 @@ use crate::Solution;
 impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
         strs.iter()
-            .max()
+            .max_by(|a, b| a.len().cmp(&b.len()))
             .unwrap()
             .chars()
             .zip(strs.iter().min().unwrap().chars())
@@ -22,7 +22,7 @@ mod tests {
         assert_eq!(
             Solution::longest_common_prefix(
                 ["flower", "flow", "flight"]
-                    .iter()
+                    .into_iter()
                     .map(|x| x.to_string())
                     .collect(),
             ),
@@ -35,7 +35,7 @@ mod tests {
         assert_eq!(
             Solution::longest_common_prefix(
                 ["dog", "racecar", "car"]
-                    .iter()
+                    .into_iter()
                     .map(|x| x.to_string())
                     .collect(),
             ),
