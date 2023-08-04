@@ -6,7 +6,7 @@ impl Solution {
 
         let mut t: Vec<String> = Vec::new();
 
-        let mut blockComment = false;
+        let mut block_comment = false;
 
         for s in &source {
             let m = s.len();
@@ -14,9 +14,9 @@ impl Solution {
             let mut i = 0;
 
             while i < m {
-                if blockComment {
+                if block_comment {
                     if i + 1 < m && &s[i..i + 2] == "*/" {
-                        blockComment = false;
+                        block_comment = false;
 
                         i += 2;
                     } else {
@@ -24,7 +24,7 @@ impl Solution {
                     }
                 } else {
                     if i + 1 < m && &s[i..i + 2] == "/*" {
-                        blockComment = true;
+                        block_comment = true;
 
                         i += 2;
                     } else if i + 1 < m && &s[i..i + 2] == "//" {
@@ -37,7 +37,7 @@ impl Solution {
                 }
             }
 
-            if !blockComment && !t.is_empty() {
+            if !block_comment && !t.is_empty() {
                 ans.push(t.join(""));
 
                 t.clear();
