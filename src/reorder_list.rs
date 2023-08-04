@@ -13,19 +13,29 @@ impl ListNode {
         Self { next: None, val }
     }
 
-    fn from_vec(data: &Vec<i32>) -> Self {
-        if data.len() == 0 {
+    fn from_vec(value: &Vec<i32>) -> Self {
+        value.to_owned().into()
+    }
+
+    fn into_vec(&self) -> Vec<i32> {
+        self.to_owned().into()
+    }
+}
+
+impl From<Vec<i32>> for ListNode {
+    fn from(value: Vec<i32>) -> Self {
+        if value.len() == 0 {
             return Self { val: 0, next: None };
         }
 
         let mut head = Self {
-            val: data[0],
+            val: value[0],
             next: None,
         };
 
         let mut p = &mut head;
 
-        for &v in data[1..].into_iter() {
+        for &v in value[1..].into_iter() {
             let node = Self::new(v);
             p.next = Some(Box::new(node));
             p = p.next.as_mut().unwrap();
@@ -33,8 +43,10 @@ impl ListNode {
 
         head
     }
+}
 
-    fn into_vec(&self) -> Vec<i32> {
+impl Into<Vec<i32>> for ListNode {
+    fn into(self) -> Vec<i32> {
         let mut result = vec![];
 
         let mut p = &Some(Box::new(self.clone()));
