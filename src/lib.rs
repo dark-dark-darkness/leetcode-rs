@@ -9,5 +9,6 @@ mod reorder_list;
 mod reverse_integer;
 mod three_sum;
 mod unique_paths_iii;
+mod reverse_string;
 
 pub struct Solution {}

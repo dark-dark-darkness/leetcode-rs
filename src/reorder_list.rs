@@ -1,42 +1,53 @@
 use crate::Solution;
 
-//Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
+pub struct ListNode<T: Clone> {
+    pub val: Option<T>,
+    pub next: Option<Box<ListNode<T>>>,
 }
 
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        Self { next: None, val }
+type LinkedList<T> = ListNode<T>;
+
+impl<T: Clone> ListNode<T> {
+    fn new() -> Self {
+        Self {
+            val: None,
+            next: None,
+        }
     }
 
-    fn from_vec(value: &Vec<i32>) -> Self {
+    #[inline]
+    fn from_val(val: T) -> Self {
+        Self {
+            next: None,
+            val: Some(val),
+        }
+    }
+
+    fn from_vec(value: &Vec<T>) -> Self {
         value.to_owned().into()
     }
 
-    fn into_vec(&self) -> Vec<i32> {
+    fn into_vec(&self) -> Vec<T> {
         self.to_owned().into()
     }
 }
 
-impl From<Vec<i32>> for ListNode {
-    fn from(value: Vec<i32>) -> Self {
+impl<T: Clone> From<Vec<T>> for ListNode<T> {
+    fn from(value: Vec<T>) -> Self {
         if value.len() == 0 {
-            return Self { val: 0, next: None };
+            return Self {
+                val: None,
+                next: None,
+            };
         }
 
-        let mut head = Self {
-            val: value[0],
-            next: None,
-        };
+        let mut head = Self::from_val(value[0].clone());
 
         let mut p = &mut head;
 
-        for &v in value[1..].into_iter() {
-            let node = Self::new(v);
+        for v in value[1..].iter() {
+            let node = Self::from_val(v.clone());
             p.next = Some(Box::new(node));
             p = p.next.as_mut().unwrap();
         }
@@ -45,15 +56,15 @@ impl From<Vec<i32>> for ListNode {
     }
 }
 
-impl Into<Vec<i32>> for ListNode {
-    fn into(self) -> Vec<i32> {
+impl<T: Clone> Into<Vec<T>> for ListNode<T> {
+    fn into(self) -> Vec<T> {
         let mut result = vec![];
 
         let mut p = &Some(Box::new(self.clone()));
 
         loop {
             if let Some(v) = p {
-                result.push(v.val);
+                result.push(v.val.as_ref().unwrap().clone());
                 p = &v.next;
             } else {
                 break;
@@ -64,8 +75,8 @@ impl Into<Vec<i32>> for ListNode {
 }
 
 impl Solution {
-    pub fn reorder_list(head: &mut Option<Box<ListNode>>) {
-        let mut new_head = Box::new(ListNode { val: 0, next: None });
+    pub fn reorder_list(head: &mut Option<Box<ListNode<i32>>>) {
+        let mut new_head = Box::new(ListNode::new());
 
         let values = {
             let mut result = vec![];
@@ -85,7 +96,7 @@ impl Solution {
         let mut p = &mut new_head;
 
         loop {
-            let node = ListNode::new(values[lp]);
+            let node = ListNode::from_val(values[lp].unwrap_or(0));
             lp += 1;
             p.next = Some(Box::new(node));
             p = p.next.as_mut().unwrap();
@@ -94,7 +105,7 @@ impl Solution {
                 break;
             }
 
-            let node = ListNode::new(values[rp]);
+            let node = ListNode::from_val(values[rp].unwrap_or(0));
             rp -= 1;
             p.next = Some(Box::new(node));
             p = p.next.as_mut().unwrap();

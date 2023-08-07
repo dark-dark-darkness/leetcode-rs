@@ -2,9 +2,9 @@ use crate::Solution;
 
 impl Solution {
     pub fn remove_comments(source: Vec<String>) -> Vec<String> {
-        let mut ans: Vec<String> = Vec::new();
+        let mut ans: Vec<String> = Vec::with_capacity(source.len());
 
-        let mut t: Vec<String> = Vec::new();
+        let mut t: Vec<String> = Vec::with_capacity(source.len());
 
         let mut block_comment = false;
 
