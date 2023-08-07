@@ -3,11 +3,11 @@ use crate::Solution;
 impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
         strs.iter()
-            .max_by(|a, b| a.len().cmp(&b.len()))
+            .max()
             .unwrap()
             .chars()
             .zip(strs.iter().min().unwrap().chars())
-            .take_while(|x| x.0 == x.1)
+            .take_while(|&(a, b)| a == b)
             .map(|x| x.0)
             .collect()
     }
