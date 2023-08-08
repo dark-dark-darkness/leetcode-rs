@@ -1,5 +1,7 @@
 use crate::Solution;
 
+// https://leetcode.cn/problems/trapping-rain-water/
+
 impl Solution {
     pub fn trap(height: Vec<i32>) -> i32 {
         let max = height.iter().max().unwrap_or(&0).clone();

@@ -1,5 +1,7 @@
 use crate::Solution;
 
+// https://leetcode.cn/problems/maximum-absolute-sum-of-any-subarray/
+
 impl Solution {
     pub fn max_absolute_sum(nums: Vec<i32>) -> i32 {
         let (mut p_max, mut n_min) = (0, 0);

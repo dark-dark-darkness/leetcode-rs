@@ -1,5 +1,7 @@
 use crate::Solution;
 
+// https://leetcode.cn/problems/power-of-heroes/
+
 impl Solution {
     pub fn sum_of_power(mut nums: Vec<i32>) -> i32 {
         nums.sort_unstable();
