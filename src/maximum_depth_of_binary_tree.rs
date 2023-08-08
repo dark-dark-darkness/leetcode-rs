@@ -1,14 +1,14 @@
 //Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
-pub struct TreeNode {
-    pub val: i32,
-    pub left: Option<Rc<RefCell<TreeNode>>>,
-    pub right: Option<Rc<RefCell<TreeNode>>>,
+pub struct TreeNode<T = i32> {
+    pub val: T,
+    pub left: Option<Rc<RefCell<TreeNode<T>>>>,
+    pub right: Option<Rc<RefCell<TreeNode<T>>>>,
 }
 
-impl TreeNode {
+impl<T: Clone> TreeNode<T> {
     #[inline]
-    pub fn new(val: i32) -> Self {
+    pub fn new(val: T) -> Self {
         TreeNode {
             val,
             left: None,
@@ -16,23 +16,23 @@ impl TreeNode {
         }
     }
 
-    pub fn from_vec(vec: Vec<Option<i32>>) -> Option<Rc<RefCell<TreeNode>>> {
+    pub fn from_vec(vec: &[Option<T>]) -> Option<Rc<RefCell<TreeNode<T>>>> {
         use std::collections::VecDeque;
-        let head = Some(Rc::new(RefCell::new(TreeNode::new(vec[0].unwrap()))));
+        let head = Some(Rc::new(RefCell::new(TreeNode::new(
+            vec[0].clone().unwrap(),
+        ))));
         let mut queue = VecDeque::new();
         queue.push_back(head.as_ref().unwrap().clone());
 
         for children in vec[1..].chunks(2) {
             let parent = queue.pop_front().unwrap();
-            if let Some(v) = children[0] {
-                parent.borrow_mut().left = Some(Rc::new(RefCell::new(TreeNode::new(v))));
+            if let [Some(v), ..] = children {
+                parent.borrow_mut().left = Some(Rc::new(RefCell::new(TreeNode::new(v.clone()))));
                 queue.push_back(parent.borrow().left.as_ref().unwrap().clone());
             }
-            if children.len() > 1 {
-                if let Some(v) = children[1] {
-                    parent.borrow_mut().right = Some(Rc::new(RefCell::new(TreeNode::new(v))));
-                    queue.push_back(parent.borrow().right.as_ref().unwrap().clone());
-                }
+            if let [_, Some(v)] = children {
+                parent.borrow_mut().right = Some(Rc::new(RefCell::new(TreeNode::new(v.clone()))));
+                queue.push_back(parent.borrow().right.as_ref().unwrap().clone());
             }
         }
         head
@@ -66,9 +66,9 @@ mod tests {
 
     #[test]
     fn case_1() {
-        let vals = vec![Some(3), Some(9), Some(20), None, None, Some(15), Some(7)];
+        let vals = [Some(3), Some(9), Some(20), None, None, Some(15), Some(7)];
 
-        let tree = TreeNode::from_vec(vals);
+        let tree = TreeNode::from_vec(&vals);
 
         let depth = Solution::max_depth(tree);
 
