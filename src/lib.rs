@@ -12,6 +12,7 @@ mod reorder_list;
 mod reverse_integer;
 mod reverse_string;
 mod three_sum;
+mod trapping_rain_water;
 mod unique_paths_iii;
 
 pub struct Solution {}
