@@ -1,6 +1,7 @@
 #![allow(dead_code)]
 #![allow(unused_imports)]
 
+mod _3sum;
 mod card_flipping_game;
 mod container_with_most_water;
 mod longest_common_prefix;
@@ -12,7 +13,6 @@ mod remove_comments;
 mod reorder_list;
 mod reverse_integer;
 mod reverse_string;
-mod three_sum;
 mod trapping_rain_water;
 mod unique_paths_iii;
 
