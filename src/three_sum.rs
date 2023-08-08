@@ -4,37 +4,7 @@ use crate::Solution;
 
 impl Solution {
     pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
-        nums.sort_unstable();
-        let mut result = HashSet::new();
-        let mut set = HashSet::new();
-
-        for i in 0..nums.len() {
-            let mut flag: bool = false;
-
-            for j in (i + 1)..nums.len() {
-                if nums[i] > 0 && nums[j] > 0 {
-                    flag = true;
-                    break;
-                }
-                set.insert((i, j));
-            }
-
-            if flag {
-                break;
-            }
-        }
-
-        for (i, j) in set {
-            if let Ok(k) = nums.binary_search(&(-1 * (nums[i] + nums[j]))) {
-                if k != i && k != j {
-                    let mut t = vec![nums[i], nums[j], nums[k]];
-                    t.sort_unstable();
-                    result.insert(t);
-                }
-            }
-        }
-
-        result.to_owned().into_iter().collect()
+        todo!()
     }
 }
 
@@ -52,7 +22,7 @@ mod tests {
 
     #[test]
     fn case2() {
-        assert_eq!(Solution::three_sum(vec![0, 1, 1]), vec![] as Vec<Vec<i32>>)
+        assert_eq!(Solution::three_sum(vec![0, 1, 1]), Vec::<Vec<i32>>::new())
     }
 
     #[test]
