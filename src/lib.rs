@@ -12,6 +12,7 @@ mod remove_comments;
 mod reorder_list;
 mod reverse_integer;
 mod reverse_string;
+mod subtract_the_product_and_sum_of_digits_of_an_integer;
 mod three_sum;
 mod trapping_rain_water;
 mod unique_paths_iii;
