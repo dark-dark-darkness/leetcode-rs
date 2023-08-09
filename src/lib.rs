@@ -7,6 +7,7 @@ mod longest_common_prefix;
 mod maximum_absolute_sum_of_any_subarray;
 mod maximum_depth_of_binary_tree;
 mod maximum_subarray;
+mod median_of_two_sorted_arrays;
 mod power_of_heroes;
 mod remove_comments;
 mod reorder_list;
@@ -16,5 +17,6 @@ mod subtract_the_product_and_sum_of_digits_of_an_integer;
 mod three_sum;
 mod trapping_rain_water;
 mod unique_paths_iii;
+mod where_will_the_ball_fall;
 
 pub struct Solution {}

@@ -11,7 +11,7 @@ impl Solution {
             let x = n % 10;
             sum += x;
             product *= x;
-            n = n / 10 as i32;
+            n = n / 10;
         }
 
         product - sum
