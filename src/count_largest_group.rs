@@ -1,5 +1,7 @@
 use crate::Solution;
 
+// https://leetcode.cn/problems/count-largest-group/
+
 impl Solution {
     pub fn count_largest_group(n: i32) -> i32 {
         let mut sums = [0; 37];
