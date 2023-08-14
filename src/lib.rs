@@ -6,10 +6,12 @@ mod card_flipping_game;
 mod container_with_most_water;
 mod count_largest_group;
 mod longest_common_prefix;
+mod matrix_diagonal_sum;
 mod maximum_absolute_sum_of_any_subarray;
 mod maximum_depth_of_binary_tree;
 mod maximum_subarray;
 mod median_of_two_sorted_arrays;
+mod merge_two_binary_trees;
 mod minimum_falling_path_sum_ii;
 mod power_of_heroes;
 mod remove_comments;
@@ -21,5 +23,7 @@ mod three_sum;
 mod trapping_rain_water;
 mod unique_paths_iii;
 mod where_will_the_ball_fall;
+
+mod struct_def;
 
 pub struct Solution {}
