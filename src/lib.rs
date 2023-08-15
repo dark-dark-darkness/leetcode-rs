@@ -5,6 +5,7 @@ mod can_you_eat_your_favorite_candy_on_your_favorite_day;
 mod card_flipping_game;
 mod container_with_most_water;
 mod count_largest_group;
+mod find_and_replace_in_string;
 mod longest_common_prefix;
 mod matrix_diagonal_sum;
 mod maximum_absolute_sum_of_any_subarray;
