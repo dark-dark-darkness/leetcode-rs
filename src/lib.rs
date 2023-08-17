@@ -15,6 +15,7 @@ mod maximum_subarray;
 mod median_of_two_sorted_arrays;
 mod merge_two_binary_trees;
 mod minimum_falling_path_sum_ii;
+mod number_of_ways_of_cutting_a_pizza;
 mod power_of_heroes;
 mod remove_comments;
 mod reorder_list;
