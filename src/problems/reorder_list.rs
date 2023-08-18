@@ -49,7 +49,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::{reorder_list::ListNode, Solution};
+    use crate::{struct_def::list::ListNode, Solution};
 
     #[test]
     fn case_1() {
