@@ -6,6 +6,7 @@ mod find_and_replace_in_string;
 mod find_the_losers_of_the_circular_game;
 mod longest_common_prefix;
 mod matrix_diagonal_sum;
+mod maximize_distance_to_closest_person;
 mod maximum_absolute_sum_of_any_subarray;
 mod maximum_depth_of_binary_tree;
 mod maximum_subarray;
