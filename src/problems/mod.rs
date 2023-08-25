@@ -1,7 +1,9 @@
 mod can_you_eat_your_favorite_candy_on_your_favorite_day;
 mod card_flipping_game;
 mod container_with_most_water;
+mod count_good_nodes_in_binary_tree;
 mod count_largest_group;
+mod count_pairs_of_nodes;
 mod find_and_replace_in_string;
 mod find_the_losers_of_the_circular_game;
 mod longest_common_prefix;
