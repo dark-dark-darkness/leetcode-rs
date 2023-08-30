@@ -42,7 +42,7 @@ impl Solution {
             j += 1;
         }
 
-        return (i == len) && (i == j);
+        (i == len) && (i == j)
     }
 }
 

@@ -4,7 +4,7 @@ use crate::Solution;
 
 impl Solution {
     pub fn trap(height: Vec<i32>) -> i32 {
-        let max = height.iter().max().unwrap_or(&0).clone();
+        let max = *height.iter().max().unwrap_or(&0);
         let mut sum = 0;
         for h in 1..=max {
             let l = {

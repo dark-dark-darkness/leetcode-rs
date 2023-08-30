@@ -20,7 +20,7 @@ impl Solution {
 
         while let Some(l) = seats.next() {
             if let Some(r) = seats.peek() {
-                let d = ((r - l) / 2) as usize;
+                let d = (r - l) / 2;
                 max_d = max_d.max(d);
             } else if l != len {
                 max_d = max_d.max(len - l - 1);

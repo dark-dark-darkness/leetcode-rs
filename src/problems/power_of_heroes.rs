@@ -8,11 +8,12 @@ impl Solution {
         const N: u64 = 1e9 as u64 + 7;
         let mut ans = 0;
         let mut buffer: u64 = 0;
-        for i in 0..nums.len() {
-            let min_value: u64 = nums[i] as u64 + buffer;
-            ans = (ans + ((nums[i] as u64 * nums[i] as u64) % N) * min_value) % N;
+        for num in nums {
+            let num = num as u64;
+            let min_value: u64 = num + buffer;
+            ans = (ans + ((num * num) % N) * min_value) % N;
             buffer = (buffer * 2) % N;
-            buffer += nums[i] as u64;
+            buffer += num;
         }
         ans as i32
     }

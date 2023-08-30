@@ -13,7 +13,7 @@ impl Solution {
 
         fronts
             .into_iter()
-            .chain(backs.into_iter())
+            .chain(backs)
             .filter(|x| !forb.contains(x))
             .min()
             .unwrap_or(0)

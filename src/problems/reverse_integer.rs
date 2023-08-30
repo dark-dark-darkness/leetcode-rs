@@ -22,7 +22,7 @@ impl Solution {
 
         println!("{x}");
 
-        i32::from_str_radix(x, 10).unwrap_or(0) * flag
+        x.parse::<i32>().unwrap_or(0) * flag
     }
 }
 

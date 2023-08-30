@@ -52,19 +52,15 @@ impl<T: Clone> From<Vec<T>> for ListNode<T> {
     }
 }
 
-impl<T: Clone> Into<Vec<T>> for ListNode<T> {
-    fn into(self) -> Vec<T> {
+impl<T: Clone> From<ListNode<T>> for Vec<T> {
+    fn from(val: ListNode<T>) -> Self {
         let mut result = vec![];
 
-        let mut p = &Some(Box::new(self.clone()));
+        let mut p = &Some(Box::new(val.clone()));
 
-        loop {
-            if let Some(v) = p {
-                result.push(v.val.as_ref().unwrap().clone());
-                p = &v.next;
-            } else {
-                break;
-            }
+        while let Some(v) = p {
+            result.push(v.val.as_ref().unwrap().clone());
+            p = &v.next;
         }
         result
     }

@@ -6,39 +6,31 @@ impl Solution {
     pub fn unique_paths_iii(grid: Vec<Vec<i32>>) -> i32 {
         let path: Vec<(usize, usize)> = vec![Solution::find_point(&grid, 1)];
 
-        let path_len = grid
-            .iter()
-            .flat_map(|x| x)
-            .filter(|&&x| x == 0 || x == 1)
-            .count();
+        let path_len = grid.iter().flatten().filter(|&&x| x == 0 || x == 1).count();
 
         Solution::unique_paths_iii_rec(&grid, &path, path_len)
     }
 
-    fn unique_paths_iii_rec(
-        grid: &Vec<Vec<i32>>,
-        path: &Vec<(usize, usize)>,
-        path_len: usize,
-    ) -> i32 {
+    fn unique_paths_iii_rec(grid: &Vec<Vec<i32>>, path: &[(usize, usize)], path_len: usize) -> i32 {
         let mut acc = 0;
         let &(x, y) = path.last().unwrap();
         if x != 0 {
-            acc += Solution::move_point(grid.clone(), path.clone(), (x - 1, y), path_len);
+            acc += Solution::move_point(grid.clone(), path.to_owned(), (x - 1, y), path_len);
         }
 
         if x + 1 < grid.len() {
-            acc += Solution::move_point(grid.clone(), path.clone(), (x + 1, y), path_len);
+            acc += Solution::move_point(grid.clone(), path.to_owned(), (x + 1, y), path_len);
         }
 
         if y != 0 {
-            acc += Solution::move_point(grid.clone(), path.clone(), (x, y - 1), path_len);
+            acc += Solution::move_point(grid.clone(), path.to_owned(), (x, y - 1), path_len);
         }
 
         if y + 1 < grid[x].len() {
-            acc += Solution::move_point(grid.clone(), path.clone(), (x, y + 1), path_len);
+            acc += Solution::move_point(grid.clone(), path.to_owned(), (x, y + 1), path_len);
         }
 
-        return acc;
+        acc
     }
 
     fn move_point(

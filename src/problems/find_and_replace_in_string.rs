@@ -9,12 +9,11 @@ impl Solution {
         sources: Vec<String>,
         targets: Vec<String>,
     ) -> String {
-        let n = indices.len();
         let mut arr = vec![];
 
-        for i in 0..n {
+        (0..indices.len()).for_each(|i| {
             arr.push((indices[i] as usize, i));
-        }
+        });
 
         arr.sort_unstable();
 

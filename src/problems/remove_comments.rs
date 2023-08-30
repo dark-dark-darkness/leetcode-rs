@@ -24,18 +24,16 @@ impl Solution {
                     } else {
                         i += 1;
                     }
+                } else if i + 1 < m && &s[i..i + 2] == "/*" {
+                    block_comment = true;
+
+                    i += 2;
+                } else if i + 1 < m && &s[i..i + 2] == "//" {
+                    break;
                 } else {
-                    if i + 1 < m && &s[i..i + 2] == "/*" {
-                        block_comment = true;
+                    t.push(s.chars().nth(i).unwrap().to_string());
 
-                        i += 2;
-                    } else if i + 1 < m && &s[i..i + 2] == "//" {
-                        break;
-                    } else {
-                        t.push(s.chars().nth(i).unwrap().to_string());
-
-                        i += 1;
-                    }
+                    i += 1;
                 }
             }
 
