@@ -58,7 +58,7 @@ mod tests {
 
         let head = &mut Some(Box::new(ListNode::from_vec(&raw)));
         Solution::reorder_list(head);
-        assert_eq!(head.as_ref().unwrap().into_vec(), right);
+        assert_eq!(head.as_ref().unwrap().to_vec(), right);
     }
 
     #[test]
@@ -68,6 +68,6 @@ mod tests {
 
         let head = &mut Some(Box::new(ListNode::from_vec(&raw)));
         Solution::reorder_list(head);
-        assert_eq!(head.as_ref().unwrap().into_vec(), right);
+        assert_eq!(head.as_ref().unwrap().to_vec(), right);
     }
 }

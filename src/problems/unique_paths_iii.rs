@@ -56,7 +56,7 @@ impl Solution {
             _ => unimplemented!(),
         }
     }
-
+    #[allow(clippy::needless_range_loop)]
     fn find_point(grid: &Vec<Vec<i32>>, value: i32) -> (usize, usize) {
         for i in 0..grid.len() {
             for j in 0..grid[i].len() {

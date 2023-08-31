@@ -24,14 +24,20 @@ impl<T: Clone> ListNode<T> {
         value.to_owned().into()
     }
 
-    pub fn into_vec(&self) -> Vec<T> {
+    pub fn to_vec(&self) -> Vec<T> {
         self.to_owned().into()
+    }
+}
+
+impl<T: Clone> Default for ListNode<T> {
+    fn default() -> Self {
+        Self::new()
     }
 }
 
 impl<T: Clone> From<Vec<T>> for ListNode<T> {
     fn from(value: Vec<T>) -> Self {
-        if value.len() == 0 {
+        if value.is_empty() {
             return Self {
                 val: None,
                 next: None,
