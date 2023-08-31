@@ -17,6 +17,7 @@ mod maximum_subarray;
 mod median_of_two_sorted_arrays;
 mod merge_intervals;
 mod merge_two_binary_trees;
+mod minimum_degree_of_a_connected_trio_in_a_graph;
 mod minimum_falling_path_sum_ii;
 mod minimum_jumps_to_reach_home;
 mod move_pieces_to_obtain_a_string;
