@@ -22,6 +22,7 @@ mod minimum_falling_path_sum_ii;
 mod minimum_jumps_to_reach_home;
 mod move_pieces_to_obtain_a_string;
 mod number_of_ways_of_cutting_a_pizza;
+mod number_of_ways_to_buy_pens_and_pencils;
 mod pizza_with_3n_slices;
 mod power_of_heroes;
 mod remove_comments;
