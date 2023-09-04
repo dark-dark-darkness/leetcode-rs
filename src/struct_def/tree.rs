@@ -19,6 +19,11 @@ impl<T: Clone> TreeNode<T> {
 
     pub fn from_vec(vec: &[Option<T>]) -> Option<Rc<RefCell<TreeNode<T>>>> {
         use std::collections::VecDeque;
+
+        if vec.is_empty() {
+            return None;
+        }
+
         let head = Some(Rc::new(RefCell::new(TreeNode::new(
             vec[0].clone().unwrap(),
         ))));
