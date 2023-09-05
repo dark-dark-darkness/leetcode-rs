@@ -7,6 +7,7 @@ mod count_largest_group;
 mod count_pairs_of_nodes;
 mod find_and_replace_in_string;
 mod find_the_losers_of_the_circular_game;
+mod form_smallest_number_from_two_digit_arrays;
 mod insert_interval;
 mod longest_common_prefix;
 mod matrix_diagonal_sum;
