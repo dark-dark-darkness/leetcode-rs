@@ -10,6 +10,7 @@ mod find_the_losers_of_the_circular_game;
 mod form_smallest_number_from_two_digit_arrays;
 mod insert_interval;
 mod longest_common_prefix;
+mod lowest_common_ancestor_of_deepest_leaves;
 mod matrix_diagonal_sum;
 mod maximize_distance_to_closest_person;
 mod maximum_absolute_sum_of_any_subarray;
