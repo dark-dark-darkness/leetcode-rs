@@ -7,6 +7,7 @@ mod count_good_nodes_in_binary_tree;
 mod count_largest_group;
 mod count_pairs_of_nodes;
 mod course_schedule_iii;
+mod course_schedule_iv;
 mod find_and_replace_in_string;
 mod find_the_losers_of_the_circular_game;
 mod form_smallest_number_from_two_digit_arrays;
