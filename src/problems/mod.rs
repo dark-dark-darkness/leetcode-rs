@@ -1,7 +1,11 @@
+#[allow(non_snake_case)]
+mod WHnhjV;
+
 mod binary_trees_with_factors;
 mod calculate_delayed_arrival_time;
 mod can_you_eat_your_favorite_candy_on_your_favorite_day;
 mod card_flipping_game;
+mod check_knight_tour_configuration;
 mod container_with_most_water;
 mod count_good_nodes_in_binary_tree;
 mod count_largest_group;
@@ -31,6 +35,7 @@ mod number_of_ways_of_cutting_a_pizza;
 mod number_of_ways_to_buy_pens_and_pencils;
 mod pizza_with_3n_slices;
 mod power_of_heroes;
+mod queens_that_can_attack_the_king;
 mod remove_comments;
 mod reorder_list;
 mod reverse_integer;
