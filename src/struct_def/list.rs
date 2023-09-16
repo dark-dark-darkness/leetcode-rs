@@ -1,3 +1,6 @@
+use std::cell::RefCell;
+use std::rc::Rc;
+
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode<T: Clone> {
     pub val: Option<T>,
@@ -69,5 +72,25 @@ impl<T: Clone> From<ListNode<T>> for Vec<T> {
             p = &v.next;
         }
         result
+    }
+}
+
+struct Iter<T: std::clone::Clone> {
+    current: Option<Box<ListNode<T>>>,
+}
+
+impl<T: Clone> Iterator for Iter<T> {
+    type Item = T;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        match self.current.as_ref() {
+            None => None,
+            Some(current) => {
+                let next = current.next.clone();
+                let cur_val = current.val.clone();
+                self.current = next;
+                cur_val
+            }
+        }
     }
 }
