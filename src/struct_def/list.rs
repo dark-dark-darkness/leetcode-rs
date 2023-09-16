@@ -7,6 +7,42 @@ pub struct ListNode<T: Clone> {
     pub next: Option<Box<ListNode<T>>>,
 }
 
+impl<T: Clone> IntoIterator for ListNode<T> {
+    type Item = T;
+
+    type IntoIter = Iter<T>;
+
+    fn into_iter(self) -> Self::IntoIter {
+        Self::IntoIter {
+            current: Some(Box::new(self)),
+        }
+    }
+}
+
+impl<T: Clone> FromIterator<T> for ListNode<T> {
+    fn from_iter<I: IntoIterator<Item = T>>(iter: I) -> Self {
+        let mut iter = iter.into_iter();
+        if let Some(val) = iter.next() {
+            let mut head = Self::from_val(val.clone());
+
+            let mut p = &mut head;
+
+            for v in iter {
+                let node = Self::from_val(v.clone());
+                p.next = Some(Box::new(node));
+                p = p.next.as_mut().unwrap();
+            }
+
+            head
+        } else {
+            Self {
+                val: None,
+                next: None,
+            }
+        }
+    }
+}
+
 impl<T: Clone> ListNode<T> {
     pub fn new() -> Self {
         Self {
@@ -23,12 +59,18 @@ impl<T: Clone> ListNode<T> {
         }
     }
 
-    pub fn from_vec(value: &Vec<T>) -> Self {
-        value.to_owned().into()
+    pub fn from_vec(value: &[T]) -> Self {
+        value.iter().cloned().collect()
     }
 
     pub fn to_vec(&self) -> Vec<T> {
-        self.to_owned().into()
+        self.iter().collect()
+    }
+
+    fn iter(&self) -> impl Iterator<Item = T> {
+        Iter {
+            current: Some(Box::new(self.clone())),
+        }
     }
 }
 
@@ -38,44 +80,7 @@ impl<T: Clone> Default for ListNode<T> {
     }
 }
 
-impl<T: Clone> From<Vec<T>> for ListNode<T> {
-    fn from(value: Vec<T>) -> Self {
-        if value.is_empty() {
-            return Self {
-                val: None,
-                next: None,
-            };
-        }
-
-        let mut head = Self::from_val(value[0].clone());
-
-        let mut p = &mut head;
-
-        for v in value[1..].iter() {
-            let node = Self::from_val(v.clone());
-            p.next = Some(Box::new(node));
-            p = p.next.as_mut().unwrap();
-        }
-
-        head
-    }
-}
-
-impl<T: Clone> From<ListNode<T>> for Vec<T> {
-    fn from(val: ListNode<T>) -> Self {
-        let mut result = vec![];
-
-        let mut p = &Some(Box::new(val.clone()));
-
-        while let Some(v) = p {
-            result.push(v.val.as_ref().unwrap().clone());
-            p = &v.next;
-        }
-        result
-    }
-}
-
-struct Iter<T: std::clone::Clone> {
+pub struct Iter<T: Clone> {
     current: Option<Box<ListNode<T>>>,
 }
 
