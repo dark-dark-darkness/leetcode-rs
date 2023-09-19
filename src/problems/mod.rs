@@ -17,6 +17,8 @@ mod find_the_losers_of_the_circular_game;
 mod form_smallest_number_from_two_digit_arrays;
 mod house_robber;
 mod house_robber_ii;
+mod house_robber_iii;
+mod house_robber_iv;
 mod insert_interval;
 mod longest_common_prefix;
 mod lowest_common_ancestor_of_deepest_leaves;
