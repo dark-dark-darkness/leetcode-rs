@@ -35,6 +35,7 @@ mod minimum_falling_path_sum_ii;
 mod minimum_jumps_to_reach_home;
 mod minimum_time_to_repair_cars;
 mod move_pieces_to_obtain_a_string;
+mod na_ying_bi;
 mod number_of_ways_of_cutting_a_pizza;
 mod number_of_ways_to_buy_pens_and_pencils;
 mod pizza_with_3n_slices;
