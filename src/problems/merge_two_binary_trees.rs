@@ -4,7 +4,8 @@ use std::rc::Rc;
 // https://leetcode.cn/problems/merge-two-binary-trees/description/
 
 use crate::struct_def::tree::TreeNode;
-use crate::Solution;
+struct Solution;
+
 impl Solution {
     pub fn merge_trees(
         root1: Option<Rc<RefCell<TreeNode>>>,
@@ -31,7 +32,8 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::{struct_def::tree::TreeNode, Solution};
+    use super::*;
+    use crate::struct_def::tree::TreeNode;
 
     #[test]
     fn case_1() {

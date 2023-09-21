@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 use std::collections::HashSet;
 
 // https://leetcode.cn/problems/card-flipping-game

@@ -1,6 +1,6 @@
 use std::{collections::HashSet, hash::Hash};
 
-use crate::Solution;
+struct Solution;
 
 // 1462. 课程表 IV
 // https://leetcode.cn/problems/course-schedule-iv/
@@ -35,7 +35,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

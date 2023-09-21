@@ -4,7 +4,9 @@
 
 use std::{cell::RefCell, rc::Rc};
 
-use crate::{struct_def::tree::TreeNode, Solution};
+use crate::struct_def::tree::TreeNode;
+struct Solution;
+
 impl Solution {
     pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         match root {

@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // 2596. 检查骑士巡视方案
 // https://leetcode.cn/problems/check-knight-tour-configuration/
@@ -52,7 +52,7 @@ fn can_move_points((x, y): (usize, usize), n: usize) -> Vec<(usize, usize)> {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

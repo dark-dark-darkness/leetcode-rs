@@ -1,4 +1,6 @@
-use crate::{struct_def::list::ListNode, Solution};
+use crate::struct_def::list::ListNode;
+
+struct Solution;
 
 // https://leetcode.cn/problems/reorder-list/
 
@@ -49,7 +51,8 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::{struct_def::list::ListNode, Solution};
+    use super::*;
+    use crate::struct_def::list::ListNode;
 
     #[test]
     fn case_1() {

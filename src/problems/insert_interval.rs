@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // https://leetcode.cn/problems/insert-interval/
 
@@ -32,7 +32,7 @@ fn is_cond((l1, r1): (i32, i32), (l2, r2): (i32, i32)) -> bool {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {
@@ -53,7 +53,7 @@ mod tests {
         let intervals = [[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]];
         let new_interval = [4, 8];
         let right = [[1, 2], [3, 10], [12, 16]];
-
+        
         let result = Solution::insert(
             intervals.map(|x| x.to_vec()).to_vec(),
             new_interval.to_vec(),
