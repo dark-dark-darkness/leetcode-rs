@@ -4,7 +4,8 @@ use std::rc::Rc;
 // https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/
 
 use crate::struct_def::tree::TreeNode;
-use crate::Solution;
+struct Solution;
+
 impl Solution {
     pub fn lca_deepest_leaves(
         root: Option<Rc<RefCell<TreeNode>>>,
@@ -31,7 +32,8 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::{struct_def::tree::TreeNode, Solution};
+    use super::*;
+    use crate::struct_def::tree::TreeNode;
 
     #[test]
     fn case_1() {

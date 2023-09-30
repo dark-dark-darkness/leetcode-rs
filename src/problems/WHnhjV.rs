@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // LCP 50. 宝石补给
 // https://leetcode.cn/problems/WHnhjV
@@ -18,7 +18,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

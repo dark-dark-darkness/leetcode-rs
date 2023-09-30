@@ -1,5 +1,5 @@
-use crate::Solution;
 use std::collections::HashMap;
+struct Solution;
 
 //https://leetcode.cn/problems/pizza-with-3n-slices/
 
@@ -22,7 +22,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

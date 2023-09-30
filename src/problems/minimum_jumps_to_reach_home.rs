@@ -1,4 +1,5 @@
-use crate::Solution;
+struct Solution;
+
 // https://leetcode.cn/problems/minimum-jumps-to-reach-home/
 
 impl Solution {
@@ -48,7 +49,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

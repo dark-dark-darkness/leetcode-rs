@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // https://leetcode.cn/problems/course-schedule-iii/
 
@@ -21,7 +21,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

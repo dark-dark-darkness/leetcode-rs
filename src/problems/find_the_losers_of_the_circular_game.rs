@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // https://leetcode.cn/problems/find-the-losers-of-the-circular-game/
 
@@ -32,7 +32,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

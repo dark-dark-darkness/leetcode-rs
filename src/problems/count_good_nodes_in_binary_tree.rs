@@ -4,7 +4,7 @@ use std::rc::Rc;
 // https://leetcode.cn/problems/count-good-nodes-in-binary-tree/
 
 use crate::struct_def::tree::TreeNode;
-use crate::Solution;
+struct Solution;
 
 impl Solution {
     pub fn good_nodes(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
@@ -34,7 +34,8 @@ mod tests {
         rc::Rc,
     };
 
-    use crate::{struct_def::tree::TreeNode, Solution};
+    use super::*;
+    use crate::struct_def::tree::TreeNode;
 
     #[test]
     fn case_1() {

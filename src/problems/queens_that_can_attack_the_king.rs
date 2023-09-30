@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // 1222. 可以攻击国王的皇后
 // https://leetcode.cn/problems/queens-that-can-attack-the-king/
@@ -41,7 +41,7 @@ fn get_dest(a: (i32, i32), b: (i32, i32)) -> i32 {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

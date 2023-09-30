@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // 198. 打家劫舍
 // https://leetcode.cn/problems/house-robber/
@@ -15,7 +15,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

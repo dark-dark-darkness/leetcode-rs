@@ -1,6 +1,6 @@
 use std::collections::{HashMap, HashSet};
 
-use crate::Solution;
+struct Solution;
 
 // https://leetcode.cn/problems/count-pairs-of-nodes/
 
@@ -33,7 +33,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

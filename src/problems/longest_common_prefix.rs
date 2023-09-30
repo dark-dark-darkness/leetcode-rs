@@ -1,5 +1,7 @@
-use crate::Solution;
+struct Solution;
+
 // https://leetcode.cn/problems/longest-common-prefix/
+
 impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
         strs.iter()
@@ -15,7 +17,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case1() {

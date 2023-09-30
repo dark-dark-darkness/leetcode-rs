@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 //https://leetcode.cn/problems/can-you-eat-your-favorite-candy-on-your-favorite-day/
 
@@ -10,6 +10,7 @@ impl Solution {
             println!(
                 "================================================================================"
             );
+
             dbg!(i);
             if let &[favorite_type, favorite_day, daily_cap] = dbg!(queries[i].as_slice()) {
                 let count1: i32 = candies_count.iter().take(favorite_type as usize).sum();
@@ -26,7 +27,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

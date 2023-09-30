@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // https://leetcode.cn/problems/merge-intervals/
 
@@ -31,7 +31,7 @@ fn is_cond((l1, r1): (i32, i32), (l2, r2): (i32, i32)) -> bool {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {

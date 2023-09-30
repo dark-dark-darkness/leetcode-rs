@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // https://leetcode.cn/problems/minimum-degree-of-a-connected-trio-in-a-graph/
 
@@ -49,7 +49,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case1() {

@@ -1,4 +1,4 @@
-use crate::Solution;
+struct Solution;
 
 // https://leetcode.cn/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
 
@@ -20,7 +20,7 @@ impl Solution {
 
 #[cfg(test)]
 mod tests {
-    use crate::Solution;
+    use super::*;
 
     #[test]
     fn case_1() {
