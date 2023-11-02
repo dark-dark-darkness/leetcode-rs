@@ -10,9 +10,11 @@ impl Solution {
 
         let x: Vec<u8> = if x < 0 {
             flag = -1;
-            xs.bytes().skip(1)
+            let mut bs = xs.bytes();
+            bs.next();
+            bs
         } else {
-            xs.bytes().skip(0)
+            xs.bytes()
         }
         .rev()
         .skip_while(|&b| b == b'0')
