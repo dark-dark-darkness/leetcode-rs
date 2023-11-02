@@ -49,6 +49,7 @@ mod remove_comments;
 mod reorder_list;
 mod reverse_integer;
 mod reverse_string;
+mod rings_and_rods;
 mod serialize_and_deserialize_bst;
 mod subtract_the_product_and_sum_of_digits_of_an_integer;
 mod three_sum;
