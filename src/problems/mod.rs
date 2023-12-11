@@ -43,6 +43,7 @@ mod na_ying_bi;
 mod number_of_ways_of_cutting_a_pizza;
 mod number_of_ways_to_buy_pens_and_pencils;
 mod operations_on_tree;
+mod path_with_minimum_effort;
 mod pizza_with_3n_slices;
 mod power_of_heroes;
 mod queens_that_can_attack_the_king;
