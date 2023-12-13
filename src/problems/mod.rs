@@ -22,6 +22,7 @@ mod house_robber_ii;
 mod house_robber_iii;
 mod house_robber_iv;
 mod insert_interval;
+mod lexicographically_smallest_palindrome;
 mod longest_common_prefix;
 mod lowest_common_ancestor_of_deepest_leaves;
 mod lru_cache;
