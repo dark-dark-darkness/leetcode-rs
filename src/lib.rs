@@ -4,5 +4,3 @@
 mod problems;
 
 mod struct_def;
-
-pub struct Solution {}
