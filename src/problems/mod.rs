@@ -35,6 +35,7 @@ mod maximum_profit_of_operating_a_centennial_wheel;
 mod maximum_subarray;
 mod median_of_two_sorted_arrays;
 mod merge_intervals;
+mod merge_sorted_array;
 mod merge_two_binary_trees;
 mod minimize_the_total_price_of_the_trips;
 mod minimum_degree_of_a_connected_trio_in_a_graph;
