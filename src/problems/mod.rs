@@ -3,6 +3,7 @@ mod WHnhjV;
 
 mod binary_tree_postorder_traversal;
 mod binary_trees_with_factors;
+mod buy_two_chocolates;
 mod calculate_delayed_arrival_time;
 mod can_you_eat_your_favorite_candy_on_your_favorite_day;
 mod card_flipping_game;
@@ -35,6 +36,7 @@ mod maximum_profit_of_operating_a_centennial_wheel;
 mod maximum_subarray;
 mod median_of_two_sorted_arrays;
 mod merge_intervals;
+mod merge_sorted_array;
 mod merge_two_binary_trees;
 mod minimize_the_total_price_of_the_trips;
 mod minimum_degree_of_a_connected_trio_in_a_graph;

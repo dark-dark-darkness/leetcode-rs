@@ -1,5 +1,3 @@
-use std::collections::LinkedList;
-
 struct Solution;
 
 // 1599. 经营摩天轮的最大利润
