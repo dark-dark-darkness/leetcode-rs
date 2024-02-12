@@ -1,6 +1,7 @@
 #[allow(non_snake_case)]
 mod WHnhjV;
 
+mod binary_tree_postorder_traversal;
 mod binary_trees_with_factors;
 mod calculate_delayed_arrival_time;
 mod can_you_eat_your_favorite_candy_on_your_favorite_day;
@@ -30,6 +31,7 @@ mod matrix_diagonal_sum;
 mod maximize_distance_to_closest_person;
 mod maximum_absolute_sum_of_any_subarray;
 mod maximum_depth_of_binary_tree;
+mod maximum_profit_of_operating_a_centennial_wheel;
 mod maximum_subarray;
 mod median_of_two_sorted_arrays;
 mod merge_intervals;
@@ -59,4 +61,3 @@ mod three_sum;
 mod trapping_rain_water;
 mod unique_paths_iii;
 mod where_will_the_ball_fall;
-mod maximum_profit_of_operating_a_centennial_wheel;
