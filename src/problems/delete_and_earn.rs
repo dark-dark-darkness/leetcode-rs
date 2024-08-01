@@ -1,3 +1,6 @@
+use core::num;
+use std::collections::HashMap;
+
 struct Solution;
 
 // https://leetcode.cn/problems/delete-and-earn

@@ -65,5 +65,7 @@ mod subtract_the_product_and_sum_of_digits_of_an_integer;
 mod three_sum;
 mod trapping_rain_water;
 mod tribonacci;
+#[allow(non_snake_case)]
+mod uOAnQW;
 mod unique_paths_iii;
 mod where_will_the_ball_fall;
