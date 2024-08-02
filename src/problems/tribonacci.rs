@@ -12,8 +12,8 @@ impl Solution {
 }
 
 fn tribonacci_core(n: i32, cache: &mut HashMap<i32, i32>) -> i32 {
-    if let Some(res) = cache.get(&n) {
-        res.clone()
+    if let Some(&res) = cache.get(&n) {
+        res
     } else {
         let result = match n {
             0 => 0,

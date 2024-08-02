@@ -12,8 +12,8 @@ impl Solution {
 }
 
 fn min_cost_climbing_stairs(cost: &Vec<i32>, n: usize, cache: &mut HashMap<usize, i32>) -> i32 {
-    if let Some(res) = cache.get(&n) {
-        res.clone()
+    if let Some(&res) = cache.get(&n) {
+        res
     } else {
         let result = match n {
             1 => cost[0],

@@ -27,10 +27,8 @@ impl Solution {
                 if even != -1 {
                     ans = ans.max(tmp - even + cards[i]);
                 }
-            } else {
-                if odd != -1 {
-                    ans = ans.max(tmp - odd + cards[i]);
-                }
+            } else if odd != -1 {
+                ans = ans.max(tmp - odd + cards[i]);
             }
         }
         ans
