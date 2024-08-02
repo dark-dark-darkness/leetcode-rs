@@ -5,19 +5,19 @@ struct Solution;
 
 impl Solution {
     pub fn number_of_right_triangles(grid: Vec<Vec<i32>>) -> i64 {
-        let mut col = vec![0; grid[0].len()];
+        let mut cols = vec![0; grid[0].len()];
 
-        for x in 0..grid.len() {
-            for y in 0..grid[x].len() {
-                col[y] += grid[x][y];
+        for row in grid.iter() {
+            for (y, col) in row.iter().enumerate() {
+                cols[y] += col;
             }
         }
         let mut res: i64 = 0;
-        for x in 0..grid.len() {
-            let row: i32 = grid[x].iter().sum();
-            for y in 0..grid[x].len() {
-                if grid[x][y] == 1 {
-                    res += (row - 1) as i64 * (col[y] - 1) as i64;
+        for (x, row) in grid.iter().enumerate() {
+            let row_sum: i32 = row.iter().sum();
+            for (y, &col) in grid[x].iter().enumerate() {
+                if col == 1 {
+                    res += (row_sum - 1) as i64 * (cols[y] - 1) as i64;
                 }
             }
         }
