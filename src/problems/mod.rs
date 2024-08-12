@@ -71,3 +71,5 @@ mod tribonacci;
 mod uOAnQW;
 mod unique_paths_iii;
 mod where_will_the_ball_fall;
+mod find_the_integer_added_to_array_i;
+mod implement_magic_dictionary;
