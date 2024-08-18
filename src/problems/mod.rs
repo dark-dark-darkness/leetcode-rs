@@ -68,6 +68,7 @@ mod right_triangles;
 mod rings_and_rods;
 mod serialize_and_deserialize_bst;
 mod special_array_ii;
+mod student_attendance_record_i;
 mod subtract_the_product_and_sum_of_digits_of_an_integer;
 mod three_sum;
 mod trapping_rain_water;
