@@ -1,8 +1,10 @@
 #[allow(non_snake_case)]
 mod WHnhjV;
 
+mod battleships_in_a_board;
 mod binary_tree_postorder_traversal;
 mod binary_trees_with_factors;
+mod boats_to_save_people;
 mod buy_two_chocolates;
 mod calculate_delayed_arrival_time;
 mod can_you_eat_your_favorite_candy_on_your_favorite_day;
@@ -66,6 +68,7 @@ mod right_triangles;
 mod rings_and_rods;
 mod serialize_and_deserialize_bst;
 mod special_array_ii;
+mod student_attendance_record_i;
 mod subtract_the_product_and_sum_of_digits_of_an_integer;
 mod three_sum;
 mod trapping_rain_water;
