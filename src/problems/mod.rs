@@ -75,3 +75,5 @@ mod uOAnQW;
 mod unique_paths_iii;
 mod where_will_the_ball_fall;
 mod maximum_difference_score_in_a_grid;
+mod student_attendance_record_ii;
+mod find_number_of_ways_to_reach_the_k_th_stair;
