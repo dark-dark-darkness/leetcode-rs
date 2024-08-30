@@ -96,3 +96,4 @@ mod tribonacci;
 mod uOAnQW;
 mod unique_paths_iii;
 mod where_will_the_ball_fall;
+mod sum_of_digit_differences_of_all_pairs;
