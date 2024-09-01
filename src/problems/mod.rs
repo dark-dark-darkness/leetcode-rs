@@ -68,6 +68,7 @@ mod minimum_time_to_repair_cars;
 mod move_pieces_to_obtain_a_string;
 mod na_ying_bi;
 mod non_negative_integers_without_consecutive_ones;
+mod number_of_students_doing_homework_at_a_given_time;
 mod number_of_ways_of_cutting_a_pizza;
 mod number_of_ways_to_buy_pens_and_pencils;
 mod operations_on_tree;
