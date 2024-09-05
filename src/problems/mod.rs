@@ -13,6 +13,7 @@ mod can_you_eat_your_favorite_candy_on_your_favorite_day;
 mod card_flipping_game;
 mod check_if_grid_satisfies_conditions;
 mod check_knight_tour_configuration;
+mod clear_digits;
 mod collect_coins_in_a_tree;
 mod container_with_most_water;
 mod count_good_nodes_in_binary_tree;
