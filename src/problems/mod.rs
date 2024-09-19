@@ -38,6 +38,7 @@ mod house_robber_iv;
 mod implement_magic_dictionary;
 mod insert_interval;
 mod jump_game;
+mod length_of_the_longest_alphabetical_continuous_substring;
 mod lexicographically_smallest_palindrome;
 mod longest_common_prefix;
 mod lowest_common_ancestor_of_deepest_leaves;
