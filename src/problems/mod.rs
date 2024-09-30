@@ -108,3 +108,5 @@ mod uOAnQW;
 mod unique_paths_iii;
 mod where_will_the_ball_fall;
 mod count_special_integers;
+mod time_needed_to_buy_tickets;
+mod seat_reservation_manager;
