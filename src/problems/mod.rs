@@ -27,6 +27,7 @@ mod destination_city;
 mod distribute_money_to_maximum_children;
 mod find_and_replace_in_string;
 mod find_number_of_ways_to_reach_the_k_th_stair;
+mod find_subarray_with_bitwise_or_closest_to_k;
 mod find_the_integer_added_to_array_i;
 mod find_the_k_beauty_of_a_number;
 mod find_the_losers_of_the_circular_game;
