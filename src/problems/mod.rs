@@ -33,6 +33,7 @@ mod find_the_k_beauty_of_a_number;
 mod find_the_losers_of_the_circular_game;
 mod find_the_maximum_length_of_a_good_subsequence_i;
 mod find_the_median_of_the_uniqueness_array;
+mod find_the_power_of_k_size_subarrays_i;
 mod form_smallest_number_from_two_digit_arrays;
 mod house_robber;
 mod house_robber_ii;
