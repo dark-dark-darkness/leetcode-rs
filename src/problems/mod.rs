@@ -59,6 +59,7 @@ mod maximum_difference_score_in_a_grid;
 mod maximum_number_of_vowels_in_a_substring_of_givenlength;
 mod maximum_number_that_sum_of_the_prices_is_less_than_or_equal_to_k;
 mod maximum_profit_of_operating_a_centennial_wheel;
+mod maximum_spending_after_buying_items;
 mod maximum_strength_of_a_group;
 mod maximum_subarray;
 mod median_of_two_sorted_arrays;
