@@ -98,6 +98,7 @@ mod right_triangles;
 mod rings_and_rods;
 mod rotate_array;
 mod seat_reservation_manager;
+mod semi_ordered_permutation;
 mod serialize_and_deserialize_bst;
 mod special_array_ii;
 mod student_attendance_record_i;
