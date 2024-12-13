@@ -25,6 +25,7 @@ mod course_schedule_iv;
 mod delete_and_earn;
 mod destination_city;
 mod distribute_money_to_maximum_children;
+mod final_array_state_after_k_multiplication_operations_i;
 mod find_and_replace_in_string;
 mod find_number_of_ways_to_reach_the_k_th_stair;
 mod find_subarray_with_bitwise_or_closest_to_k;
