@@ -104,6 +104,7 @@ mod student_attendance_record_i;
 mod student_attendance_record_ii;
 mod subtract_the_product_and_sum_of_digits_of_an_integer;
 mod sum_of_digit_differences_of_all_pairs;
+mod super_egg_drop;
 mod the_latest_time_to_catch_a_bus;
 mod three_sum;
 mod time_needed_to_buy_tickets;
