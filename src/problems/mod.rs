@@ -74,6 +74,7 @@ mod minimum_degree_of_a_connected_trio_in_a_graph;
 mod minimum_difference_between_highest_and_lowest_of_k_scores;
 mod minimum_falling_path_sum_ii;
 mod minimum_jumps_to_reach_home;
+mod minimum_length_of_anagram_concatenation;
 mod minimum_rectangles_to_cover_points;
 mod minimum_time_to_repair_cars;
 mod move_pieces_to_obtain_a_string;
