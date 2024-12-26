@@ -25,6 +25,7 @@ mod course_schedule_iv;
 mod delete_and_earn;
 mod destination_city;
 mod distribute_money_to_maximum_children;
+mod existence_of_a_substring_in_a_string_and_its_reverse;
 mod final_array_state_after_k_multiplication_operations_i;
 mod find_and_replace_in_string;
 mod find_number_of_ways_to_reach_the_k_th_stair;
