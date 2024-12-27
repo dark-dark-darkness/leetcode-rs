@@ -29,6 +29,7 @@ mod existence_of_a_substring_in_a_string_and_its_reverse;
 mod final_array_state_after_k_multiplication_operations_i;
 mod find_and_replace_in_string;
 mod find_number_of_ways_to_reach_the_k_th_stair;
+mod find_occurrences_of_an_element_in_an_array;
 mod find_subarray_with_bitwise_or_closest_to_k;
 mod find_the_integer_added_to_array_i;
 mod find_the_k_beauty_of_a_number;
