@@ -57,6 +57,7 @@ mod maximize_distance_to_closest_person;
 mod maximize_the_confusion_of_an_exam;
 mod maximum_absolute_sum_of_any_subarray;
 mod maximum_average_subarray_i;
+mod maximum_consecutive_floors_without_special_floors;
 mod maximum_depth_of_binary_tree;
 mod maximum_difference_score_in_a_grid;
 mod maximum_number_of_vowels_in_a_substring_of_givenlength;
